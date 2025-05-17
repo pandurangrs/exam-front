@@ -12,4 +12,8 @@ export class SingupComponent implements OnInit {
   ngOnInit() {
   }
 
+  formSubmit(){
+    alert("submit");
+  }
+
 }

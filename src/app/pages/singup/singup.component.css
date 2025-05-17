@@ -1,3 +1,9 @@
 .full-width{
     width: 100%;
 }
+
+.full-width .mat-form-field-infix {
+  padding: 0 8px;
+  height: 32px;  /* This affects the input height */
+  font-size: 0.8rem;
+}
