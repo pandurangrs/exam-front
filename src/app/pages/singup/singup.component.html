@@ -1,54 +1,71 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6 offset-md-3">
-      <div class="continer text-center">
-        <!-- <img src="../../../assets/logo.png" alt=""> -->
-      </div>
-      <h1 class="text-center" style="margin-top: 2%;">Register here !</h1>
-      <form (ngSubmit)="formSubmit()">
-        <!-- userName -->
-        <mat-form-field class="full-width" appearance="outline">
-          <mat-label>User Name</mat-label>
-          <input matInput placeholder="Enter here">
-        </mat-form-field>
-
-        <!-- password -->
-        <mat-form-field class="full-width" appearance="outline">
-          <mat-label>password</mat-label>
-          <input type="password" matInput placeholder="Enter here">
-        </mat-form-field>
-
-        <!-- First Name -->
-        <mat-form-field class="full-width" appearance="outline">
-          <mat-label>First Name</mat-label>
-          <input matInput placeholder="Enter here">
-        </mat-form-field>
-
-        <!-- Email -->
-        <mat-form-field class="full-width" appearance="outline">
-          <mat-label>Last Name</mat-label>
-          <input matInput placeholder="Enter here">
-        </mat-form-field>
-        <!-- Email -->
-        <mat-form-field class="full-width" appearance="outline">
-          <mat-label>Email</mat-label>
-          <input type="email" matInput placeholder="Enter here">
-        </mat-form-field>
-
-        <!-- Phone -->
-        <mat-form-field class="full-width" appearance="outline">
-          <mat-label>Phone</mat-label>
-          <input type="number" matInput placeholder="Enter here">
-        </mat-form-field>
-
+      <mat-card class="mt20">
 
         <div class="continer text-center">
-          <button mat-raised-button color="primary">Register</button>
-          <button style="margin-left: 2%;" mat-raised-button color="accent">Clear</button>
+          <img class="home-logo" src="../../../assets/lcwd_logo.webp" alt="">
         </div>
+        <h1 class="text-center">Register here !</h1>
+        <!-- <form (ngSubmit)="formSubmit()"> -->
+        <form>
 
-      </form>
+          <!-- userName -->
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>User Name</mat-label>
+            <input [(ngModel)]="userDto.userName" name="userName" type="text" matInput placeholder="Enter here">
+            <mat-hint>Username must be unique</mat-hint>
+          </mat-form-field>
 
+          <!-- password -->
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>password</mat-label>
+            <input [(ngModel)]="userDto.password" name="password" type="password" matInput placeholder="Enter here">
+          </mat-form-field>
+
+          <!-- First Name -->
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input [(ngModel)]="userDto.firstName" name="firstName" type="text" matInput placeholder="Enter here">
+          </mat-form-field>
+
+          <!-- last name -->
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Last Name</mat-label>
+            <input [(ngModel)]="userDto.lastName" name="lastName" type="text" matInput placeholder="Enter here">
+          </mat-form-field>
+          <!-- Email -->
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input [(ngModel)]="userDto.email" name="email" type="email" matInput placeholder="Enter here">
+          </mat-form-field>
+
+          <!-- Phone -->
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Phone</mat-label>
+            <input [(ngModel)]="userDto.phone" name="phone" type="number" matInput placeholder="Enter here">
+          </mat-form-field>
+
+          <!-- Address -->
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Address</mat-label>
+            <input [(ngModel)]="userDto.address" name="address" type="text" matInput placeholder="Enter here">
+          </mat-form-field>
+
+          <!-- About -->
+          <mat-form-field class="full-width" appearance="outline">
+            <mat-label>About</mat-label>
+            <input [(ngModel)]="userDto.about" name="about" type="text" matInput placeholder="Enter here">
+          </mat-form-field>
+
+          <div class="continer text-center">
+            <button type="submit" mat-raised-button color="primary" (click)="formSubmit()">Register</button>
+            <button class="ml20" mat-raised-button color="accent" (click)="clearForm()">Clear</button>
+          </div>
+
+        </form>
+
+      </mat-card>
 
     </div>
   </div>

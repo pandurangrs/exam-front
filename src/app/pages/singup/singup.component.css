@@ -2,8 +2,12 @@
     width: 100%;
 }
 
-.full-width .mat-form-field-infix {
-  padding: 0 8px;
-  height: 32px;  /* This affects the input height */
-  font-size: 0.8rem;
+.no-space-between-fields .mat-form-field {
+  margin-bottom: 0px; /* or a smaller value like 4px */
+}
+
+.home-logo{
+  margin-top: 2%;
+  height: 91px;
+  width: 91px;
 }

@@ -1,3 +1,24 @@
-<p>
-  header works!
-</p>
+<mat-toolbar color="primary">
+  <a routerLink="/">
+
+    <button mat-icon-button class="example-icon" style="color: white;" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu_book</mat-icon>
+    </button>
+  </a>
+  <span>Exam Portal</span>
+  <span class="example-spacer"></span>
+
+
+  <a [routerLink]="'/login'">
+    <button mat-icon-button class="example-icon favorite-icon" style="color: white;" aria-label="Example icon-button with heart icon">
+      Login
+    </button>
+  </a>
+
+  <a [routerLink]="'/signup'">
+    <button mat-icon-button class="example-icon favorite-icon mr20 ml20" style="color: white;"
+      aria-label="Example icon-button with heart icon">
+      Register
+    </button>
+  </a>
+</mat-toolbar>
