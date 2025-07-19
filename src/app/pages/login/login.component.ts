@@ -24,7 +24,8 @@ export class LoginComponent implements OnInit {
  
   formSubmit(){
     console.log("login btn clicked");
-    const userName = this.loginData.get('userName')?.value?.trim();
+    const userNameControl = this.loginData.get('userName');
+const userName = userNameControl ? userNameControl.value.trim() : '';
     if(!userName){
       this.snackBar.open("UserName is Required",'',{
         duration:2000
@@ -37,7 +38,7 @@ export class LoginComponent implements OnInit {
 
 
   formReset(){
-      this.loginData.reset();
+      this.loginData.reset()
   }
 
 }
